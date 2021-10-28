@@ -1,0 +1,119 @@
+<!-- 
+  Project Name: D-Stress
+  Team Members: Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang
+  Date: 6/6/2021
+  Task Description: HTML Page with sensor config that users will use to send and retrieve data from Firebase (sent from arduino/flask server)
+ -->
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Wearable Sensor</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- import styles-->
+            <link rel="stylesheet" type="text/css" href="index.css">
+            <link rel="stylesheet" type="text/css" href="w3.css">
+             <!-- Compiled and minified CSS -->
+
+            <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+            <script type = "text/javascript" src = "index.js"></script>
+            <script src="https://kit.fontawesome.com/b9467937b0.js" crossorigin="anonymous"></script>
+        </head>
+      
+
+        <body>
+            <!-- Header -->
+            <div class="header w3-blue">
+                <h1>D-Stress</h1>
+                <p>Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang</p>
+            </div>
+
+            <!-- Navbar -->
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="aboutUs.html">About Us</a>
+                <a href="form.html">Sensor Data</a>
+                <a href="login.html" class="right">Login</a>
+            </div>
+
+            <!--Form page heading and main phrase-->
+            <div class="intro2"> 
+                <h1 id = "title" id = "fr">Sensor Configuration</h1>
+                <h3 id = "feedback">Setup Instructions: Upload Arduino code to sensor. Run python file app.py. Submit session number. Connect sensor to fingers. When ready, hit start recording session. </h3>
+            </div>
+            <br>
+
+            <div class="btn-group" id = fr>
+            <!--  <button onclick="checkUserID()" >console log userid</button> -->
+                <p style="display:inline">What session of the day is it? </p><input id="sessionNum"></input> 
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" onclick="setSession()">Submit</button>
+                <br> <br>
+                
+
+            <!--   <button onclick="sensorReady()" >Is the sensor ready?</button> -->
+                <h3>Recording data and sending to Firebase</h3>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" onclick="startSess()">Start recording session</button>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" onclick="stopSess()">Stop recording session</button>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" onclick="sendtoDB()">Send data to firebase</button>
+                <br> <br>
+
+                <h3>Retrieving data from Firebase</h3>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" style="display:inline" onclick="retrieveDates()">Retrieve Data From Firebase</button>
+
+                <!--dropdown1-->
+                <select id="arr"></select>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" onclick="submitDate()">Confirm Date</button>
+                
+                <!--dropdown2-->
+                <select id="arr2"></select>
+                <button class = "w3-large w3-btn w3-blue w3-round-large" id = "bt" style="display:inline" onclick="submitSession()">Confirm Session</button>
+                
+                <!-- <button onclick="viewData()">Populate Table</button>
+                <button onclick="tableCreate()">Display Table</button> -->
+            </div>
+            <br> 
+
+            <!--JavaScript & JQuery at end of body for optimized loading-->
+            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="javascript/materialize.js"></script>
+
+            <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+            <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+            <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+            <script>
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                var firebaseConfig = {
+                    apiKey: "AIzaSyBSk-jIkc7Xjk-K8TNKzhpRqakpMZ5prrs",
+                    authDomain: "wearablesensor-36b85.firebaseapp.com",
+                    databaseURL: "https://wearablesensor-36b85-default-rtdb.firebaseio.com",
+                    projectId: "wearablesensor-36b85",
+                    storageBucket: "wearablesensor-36b85.appspot.com",
+                    messagingSenderId: "1008471952867",
+                    appId: "1:1008471952867:web:229e59e9d14eab489024d6",
+                    measurementId: "G-6PH3P75TQ2"
+                    };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+            </script>
+        
+            <!-- Also need to include fireScripts.js custom JS file -->
+            <!-- <script src="javascript/userScripts.js"></script> -->
+            <script src="combinedScripts.js"></script>
+            <!-- Matirialize function for the dropdown-->
+            <script> 
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+            </script>
+
+        </body>
+    </html>

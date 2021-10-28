@@ -1,0 +1,159 @@
+<!-- 
+  Project Name: D-Stress
+  Team Members: Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang
+  Date: 6/6/2021
+  Task Description: Home Page
+ -->
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Wearable Sensor</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- import styles -->
+      <link rel="stylesheet" type="text/css" href="w3.css">
+      <link rel="stylesheet" type="text/css" href="index.css">
+      <link rel="stylesheet" type="text/css" href="slideshow.css">
+       <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+      <script src="https://kit.fontawesome.com/b9467937b0.js" crossorigin="anonymous"></script>
+      <!-- increase size of the icons -->
+      <style>
+        .fas {font-size:200px}
+      </style>
+    </head>
+    
+    <body>
+
+
+      <!-- Header -->
+      <div class="header w3-blue">
+        <h1>D-Stress</h1>
+        <p>Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang</p>
+      </div>
+        
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="form.html">Sensor Data</a>
+        <a href="login.html" class="right">Login</a>
+      </div>
+
+      <!-- First Grid -->
+      <div class="w3-row-padding w3-padding-64 w3-container">
+        <!-- text fills two columns and the icon fils one-->
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>Galvanic Skin Response</h1>
+            <p>Galvanic skin response shows a change in <strong>electrical resistance</strong> caused by 
+              the state of our emotions. Certain emotions such as fear and joy increases
+              the activity of our <strong>eccrine sweat glands</strong>, the major sweat glands in the skin.
+              GSR specifically shows the intensity of our emotions, rather than specific emotions.
+
+            </p>
+          </div>
+
+          <div class="w3-third w3-center">
+            <i class="fas fa-tint w3-padding-64"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Grid -->
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+            <i class="fas fa-chalkboard-teacher w3-padding-64 w3-margin-right"></i>
+          </div>
+
+          <div class="w3-twothird">
+            <h1>Our Sensor</h1>
+            <p>Our sensor constantly measures the value of the galvanic skin reponse of the user. 
+              It can easily be worn on the wrist as it collects data. Our website is able to take and store data from the sensor. With our user authentication system, only you will be able to access and modify your stored data on our website.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="sensorPhotos/img1.jpg" style="width:100%">
+          <div class="text">Completed Sensor Build</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="sensorPhotos/img2.jpg" style="width:100%">
+          <div class="text">Completed Sensor Build</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="sensorPhotos/img10.jpg" style="width:100%">
+          <div class="text">Sensor Inside Carrying Case</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="sensorPhotos/img11.jpg" style="width:100%">
+          <div class="text">Sensor Inside Carrying Case</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="sensorPhotos/img12.jpg" style="width:100%">
+          <div class="text">Carrying Case</div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)"><i></i>&#10094; Previous</a>
+        <a class="next" onclick="plusSlides(1)"><i></i>Next  &#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <script src="slideshow.js"></script>
+          <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+      <!-- Footer -->
+      <footer class="page-footer w3-blue">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h2 class="white-text">Wearable Sensor Project</h2>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <!-- Contact us buttons -->
+              <h5 class="white-text">Contact Us</h5>
+              <a href="https://www.facebook.com/edmond.niu" class="fa fa-facebook"></a>
+              <a href="https://twitter.com/HighTechHS?s=20" class="fa fa-twitter"></a>
+              <a href="mailto:kebian@ctemc.org" class="fa fa-google"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 BME/CSE Group 1
+          <a class="grey-text text-lighten-4 right" href="https://github.com/CSE-HighTechHighSchool/WS2021_1">Github Repository</a>
+          </div>
+        </div>
+      </footer>
+    </body>
+    
+  </html>

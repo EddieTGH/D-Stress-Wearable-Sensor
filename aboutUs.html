@@ -1,0 +1,133 @@
+<!-- 
+  Project Name: D-Stress
+  Team Members: Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang
+  Date: 6/6/2021
+  Task Description: Page giving information about our project
+ -->
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Wearable Sensor</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="index.css">
+      <link rel="stylesheet" type="text/css" href="w3.css">
+       <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script src="https://kit.fontawesome.com/b9467937b0.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+
+<!-- Page header -->
+<div class="header w3-blue">
+  <h1>D-Stress</h1>
+  <p>Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang</p>
+</div>
+
+<!-- Navigation buttons to other parts of website -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="aboutUs.html">About Us</a>
+  <a href="form.html">Sensor Data</a>
+  <a href="login.html" class="right">Login</a>
+</div>
+
+<!-- Page layout -->
+<div class="row">
+  <!-- Left column content -->
+  <div class="side">
+    <!-- About Statement -->
+    <h2>About</h2>
+    <img src="images/emotions.png" class="w3-round" alt="A range of emotions" width = "490"> 
+    <p>Our team is building a portable sensor 
+      that will be able to measure the wearer's stress levels and emotional state.</p>
+    <!-- Image of sensor -->
+    <h3>Our Sensor</h3>
+    <div class="blueBox">
+      <img src="images/finalSensor.jpg" class="w3-round" alt="Runner drinking water." width = "490"> 
+    </div><br>
+    <!-- Image of prototype -->
+    <h3>Breadboard Prototype</h3>
+    <div class="blueBox">
+      <img src="images/sensor1.png" class="w3-round" alt="Runner drinking water." width = "490"> 
+    </div>
+  </div>
+  <!-- Right column content -->
+  <div class="main">
+    <!-- Rationale -->
+    <h2>Rationale</h2>
+
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/stressedOut.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4" style = "font-size: 36px">Why is our sensor important?</span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Why is our sensor important?<i class="material-icons right">close</i></span>
+        <p>Throughout the day, a person will be put under lots of pressure, causing stress. It's a part of daily life, and in the modern world where everyone has deadlines 
+          and expectations to meet, it is easy to become stressed, causing various negative effects on the body and mind. Examples of these negative effects include headaches, fatigue, 
+          muscle tension/pain, restlessness, anxiety, anger, depression, and others.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/stressSource.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4" style = "font-size: 36px">Why is our sensor important?</span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Why is our sensor important?<i class="material-icons right">close</i></span>
+        <p>With our sensor, the user will be able to monitor their stress levels. This information can be useful in many ways. For instance, you could see trends in stress 
+          levels and identify the causes of increased stress.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/stressMeter.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4" style = "font-size: 36px">How Our Sensor Works</span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">How Our Sensor Works<i class="material-icons right">close</i></span>
+        <p>Our sensor is a galvanic skin sensor that constantly monitors and outputs a value representing the skin's galvanic response. We then use this value to estimate the 
+          stress level of the user. We store the data using Firebase, an online, realtime database by Google. Users can create an account and sign in on our website, where they will then 
+          upload the data in their sensor to their own account with an email and password. We will not be able to view user passwords, only emails. This allows for data security and privacy.</p>
+      </div>
+    </div>
+
+</div>
+  <!-- Footer -->
+  <footer class="page-footer w3-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h2 class="white-text">Wearable Sensor Project</h2>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <!-- Contact us buttons -->
+          <h5 class="white-text">Contact Us</h5>
+          <a href="https://www.facebook.com/edmond.niu" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/HighTechHS?s=20" class="fa fa-twitter"></a>
+          <a href="mailto:kebian@ctemc.org" class="fa fa-google"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 BME/CSE Group 1
+      <a class="grey-text text-lighten-4 right" href="https://github.com/CSE-HighTechHighSchool/WS2021_1">Github Repository</a>
+      </div>
+    </div>
+  </footer>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body> 
+</html>

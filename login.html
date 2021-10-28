@@ -1,0 +1,103 @@
+<!-- 
+  Project Name: D-Stress
+  Team Members: Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang
+  Date: 6/6/2021
+  Task Description: Page for logging in and logging out
+ -->
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Wearable Sensor</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- import styles -->
+      <link rel="stylesheet" type="text/css" href="w3.css">
+      <link rel="stylesheet" type="text/css" href="index.css">
+          <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+      <script type = "text/javascript" src = "index.js"></script>
+      <script src="https://kit.fontawesome.com/b9467937b0.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+      <!-- Header -->
+      <div class="header w3-blue">
+        <h1>D-Stress</h1>
+        <p>Kelvin Bian, Amanda Lau, Edmond Niu, TC Taylor, Annie Wang</p>
+      </div>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="form.html">Sensor Data</a>
+        <a href="login.html" class="right">Login</a>
+      </div>
+      <!-- The surrounding HTML is left untouched by FirebaseUI.
+          Your app may use that space for branding, controls and other customizations.-->
+      <h1>Login or Create an Account</h1>
+      <div id="firebaseui-auth-container" style = "margin:60px;"></div>
+      <div id="loader">Loading...</div>
+      <!-- Create buttons -->
+      <button class = "w3-xlarge w3-btn w3-blue w3-round-large" onclick="getID()" >Get ID</button>
+      <button class = "w3-xlarge w3-btn w3-red w3-round-large" onclick="logout()">Logout</button>
+      
+      <!-- Footer -->
+      <footer class="page-footer w3-blue">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h2 class="white-text">Wearable Sensor Project</h2>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <!-- Contact us buttons -->
+              <h5 class="white-text">Contact Us</h5>
+              <a href="https://www.facebook.com/edmond.niu" class="fa fa-facebook"></a>
+              <a href="https://twitter.com/HighTechHS?s=20" class="fa fa-twitter"></a>
+              <a href="mailto:kebian@ctemc.org" class="fa fa-google"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 BME/CSE Group 1
+          <a class="grey-text text-lighten-4 right" href="https://github.com/CSE-HighTechHighSchool/WS2021_1">Github Repository</a>
+          </div>
+        </div>
+      </footer>
+      <!--JavaScript & JQuery at end of body for optimized loading-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- Also need to include fireScripts.js custom JS file 
+      <script src="app.py"></script> -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyBSk-jIkc7Xjk-K8TNKzhpRqakpMZ5prrs",
+          authDomain: "wearablesensor-36b85.firebaseapp.com",
+          databaseURL: "https://wearablesensor-36b85-default-rtdb.firebaseio.com",
+          projectId: "wearablesensor-36b85",
+          storageBucket: "wearablesensor-36b85.appspot.com",
+          messagingSenderId: "1008471952867",
+          appId: "1:1008471952867:web:229e59e9d14eab489024d6",
+          measurementId: "G-6PH3P75TQ2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+      <!-- Firebase user authentication Javascript -->
+      <script src="firebase.js"></script>
+      <script src="combinedScripts.js"></script>
+    </body>
+
+  </html>
